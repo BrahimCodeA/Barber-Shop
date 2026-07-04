@@ -68,7 +68,7 @@ export default function ServiceCards() {
                     alt={cut.title}
                     fill
                     sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 25vw"
-                    quality={70}
+                    quality={75}
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
 
