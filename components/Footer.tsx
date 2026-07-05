@@ -1,5 +1,6 @@
 import { Scissors, MapPin, Phone } from "lucide-react";
 import { FaInstagram, FaTiktok } from "react-icons/fa";
+import CustomLink from "./CustomLink";
 
 export default function Footer() {
   return (
@@ -46,23 +47,19 @@ export default function Footer() {
               Réseaux
             </h3>
             <div className="flex gap-4">
-              <a
+              <CustomLink
                 href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="text-white/50 hover:text-white transition"
               >
                 <FaInstagram size={20} />
-              </a>
+              </CustomLink>
 
-              <a
+              <CustomLink
                 href="https://www.tiktok.com/"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="text-white/50 hover:text-white transition"
               >
                 <FaTiktok size={18} />
-              </a>
+              </CustomLink>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import CustomLink from "./CustomLink";
 
 const container = {
   hidden: {},
@@ -97,13 +98,9 @@ export default function Hero() {
               asChild
               className="mt-10 bg-white hover:bg-black text-black hover:text-white font-black uppercase tracking-[0.25em] rounded-none px-10 py-6 border border-white transition-all duration-300 hover:scale-105 shadow-lg shadow-white/10"
             >
-              <a
-                href="https://www.planity.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <CustomLink href="https://www.planity.com/">
                 Réserver maintenant
-              </a>
+              </CustomLink>
             </Button>
           </motion.div>
         </motion.div>

@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import CustomLink from "./CustomLink";
 
 const cuts = [
   {
@@ -77,13 +78,9 @@ export default function ServiceCards() {
                       asChild
                       className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full px-6"
                     >
-                      <a
-                        href="https://www.planity.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <CustomLink href="https://www.planity.com/">
                         Réserver
-                      </a>
+                      </CustomLink>
                     </Button>
                   </div>
                 </div>

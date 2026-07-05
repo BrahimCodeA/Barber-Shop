@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import CustomLink from "./CustomLink";
 
 export default function Contact() {
   return (
@@ -44,20 +45,19 @@ export default function Contact() {
             </p>
 
             <div className="flex gap-4 mt-8">
-              <a
+              <CustomLink
                 href="tel:0612345678"
                 className="border border-white/20 px-6 py-3 rounded-full text-sm uppercase tracking-widest hover:bg-white hover:text-black transition"
               >
                 Appeler
-              </a>
+              </CustomLink>
 
-              <a
+              <CustomLink
                 href="https://www.planity.com/"
-                target="_blank"
                 className="border border-black/20 px-6 py-3 rounded-full bg-white text-black text-sm uppercase tracking-widest hover:bg-black hover:text-white transition"
               >
                 Réserver
-              </a>
+              </CustomLink>
             </div>
           </motion.div>
 

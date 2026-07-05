@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
+import CustomLink from "./CustomLink";
 
 export default function About() {
   return (
@@ -83,13 +84,7 @@ export default function About() {
           </p>
 
           <Button asChild className="rounded-full px-5 font-bold">
-            <a
-              href="https://www.planity.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Réserver
-            </a>
+            <CustomLink href="https://www.planity.com/">Réserver</CustomLink>
           </Button>
         </motion.div>
       </div>
