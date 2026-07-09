@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 type Props = {
@@ -18,6 +20,22 @@ export default function CustomLink({
     href.startsWith("tel:") ||
     href.startsWith("mailto:");
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    onClick?.();
+
+    if (href.startsWith("#")) {
+      e.preventDefault();
+
+      const section = document.querySelector(href);
+
+      section?.scrollIntoView({
+        behavior: "smooth",
+      });
+
+      window.history.pushState(null, "", href);
+    }
+  };
+
   if (isExternal) {
     return (
       <a
@@ -25,7 +43,6 @@ export default function CustomLink({
         target={href.startsWith("http") ? "_blank" : undefined}
         rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
         className={className}
-        onClick={onClick}
       >
         {children}
       </a>
@@ -33,7 +50,7 @@ export default function CustomLink({
   }
 
   return (
-    <Link href={href} className={className} onClick={onClick}>
+    <Link href={href} className={className} onClick={handleClick}>
       {children}
     </Link>
   );

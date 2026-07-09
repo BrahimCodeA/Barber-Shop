@@ -10,10 +10,10 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
         {/* LOGO */}
         <div className="flex items-center gap-2 text-xl font-bold tracking-widest uppercase">
-          <CustomLink href="#hero" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2">
             <Scissors className="w-5 h-5" />
             Barber Shop
-          </CustomLink>
+          </a>
         </div>
 
         <DesktopNav />
