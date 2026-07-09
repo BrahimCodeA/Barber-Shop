@@ -17,7 +17,6 @@ export default function Navbar() {
         </div>
 
         <DesktopNav />
-
         <MobileMenu />
       </div>
     </header>
